@@ -1,0 +1,9 @@
+{%extends 'template-base.html' %}
+{%block title%}Contact{%endblock%}
+{%block contenu%}
+  {%for article in articles%}
+    <h1><a href="{% url 'articles:article'  %}">{{article.titre}}</a></h1>
+    <p>{{article.contenu}}</p>
+    <span>{{article.date_publication}}</span>
+  {%endfor%}
+{%endblock%}
